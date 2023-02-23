@@ -7,5 +7,7 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('parent', { path: '/parent/:parent_name' });
+  this.route('parent', { path: '/parent/:parent_name' }, function () {
+    this.route('children', { path: '/children/:first_child/:second_child' });
+  });
 });
