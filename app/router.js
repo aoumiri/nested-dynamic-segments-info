@@ -14,10 +14,8 @@ Router.map(function () {
       'parent',
       { path: '/parent/:parent_name', resetNamespace: true },
       function () {
-        this.route('show', { path: '/' }, function () {
-          this.route('children', {
-            path: '/children/:first_child/:second_child',
-          });
+        this.route('children', {
+          path: '/children/:first_child/:second_child',
         });
         this.route('meta');
       }
