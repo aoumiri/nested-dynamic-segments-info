@@ -19,6 +19,7 @@ Router.map(function () {
             path: '/children/:first_child/:second_child',
           });
         });
+        this.route('meta');
       }
     );
   });
