@@ -1,9 +1,0 @@
-{{page-title "Parent.Child"}}
-<lu>
-  <li>Child 1: {{this.model.first_child}}</li>
-  <li>Child 2: {{this.model.second_child}}</li>
-</lu>
-
-<LinkTo @route="home">Go to home</LinkTo>
-<button type="button" {{on "click" this.transitionTo}}>Go to home</button>
-{{outlet}}

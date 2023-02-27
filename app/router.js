@@ -7,18 +7,8 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('home', { path: '/' });
-
-  this.route('families', function () {
-    this.route(
-      'parent',
-      { path: '/parent/:parent_name', resetNamespace: true },
-      function () {
-        this.route('children', {
-          path: '/children/:first_child/:second_child',
-        });
-        this.route('meta');
-      }
-    );
+  this.route('main', { path: '/' });
+  this.route('dynamic-segments', {
+    path: '/dynamic-segments/:first/:second',
   });
 });

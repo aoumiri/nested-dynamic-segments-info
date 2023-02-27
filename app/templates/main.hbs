@@ -1,0 +1,14 @@
+<h4>Organizations</h4>
+<div>
+  <LinkTo @route="dynamic-segments" @models={{array "foo" "bar"}}>Go to dynamic segment</LinkTo> (linkTo with a @models array)
+</div>
+<div>
+  <LinkTo @route="dynamic-segments" @model={{hash first="foo" second="bar"}}>Go to dynamic segment</LinkTo> (linkTo with a @model hash)
+</div>
+
+<ul>
+  <li>paramNames: {{this.paramsNamesAsString}}</li>
+  <li>params: {{this.paramsAsString}}</li>
+</ul>
+
+{{outlet}}
