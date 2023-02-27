@@ -2,11 +2,11 @@ import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { service } from '@ember/service';
 
-export default class HomeController extends Controller {
+export default class FlowsController extends Controller {
   @service router;
 
   @action
-  transitionTo() {
-    this.router.transitionTo('home');
+  goToSettings() {
+    this.router.transitionTo('settings');
   }
 }

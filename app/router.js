@@ -7,17 +7,21 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('home', { path: '/' });
-
-  this.route('families', function () {
+  this.route('protected', { path: '/' }, function () {
     this.route(
-      'parent',
-      { path: '/parent/:parent_name', resetNamespace: true },
+      'organizations',
+      { path: 'organizations/:organization_slug', resetNamespace: true },
       function () {
-        this.route('children', {
-          path: '/children/:first_child/:second_child',
+        this.route('settings', { resetNamespace: true }, function () {
+          this.route('subscription');
         });
-        this.route('meta');
+
+        this.route('show', { path: '/' }, function () {
+          this.route('flows', {
+            path: '/flows/:name/:step_id',
+            resetNamespace: true,
+          });
+        });
       }
     );
   });
