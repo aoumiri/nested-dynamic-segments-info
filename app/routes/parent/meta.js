@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 
-export default class HomeRoute extends Route {
+export default class MetaRoute extends Route {
   redirect(_, transition) {
     console.group('redirect');
     console.log('paramNames', transition.from?.paramNames);
