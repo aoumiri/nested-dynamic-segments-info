@@ -12,7 +12,7 @@ Router.map(function () {
       'organizations',
       { path: 'organizations/:organization_slug', resetNamespace: true },
       function () {
-        this.route('settings');
+        this.route('settings', { resetNamespace: true });
 
         this.route('show', { path: '/' }, function () {
           this.route('flows', {
