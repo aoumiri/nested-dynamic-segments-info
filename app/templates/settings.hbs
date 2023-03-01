@@ -1,8 +1,9 @@
-<h3>Settings</h3>
-<LinkTo @route="settings.subscription">Go to subscription</LinkTo>
+<h4>Settings</h4>
+<div>
+  <LinkTo @route="flows" @models={{array "slug-1111" "subscription" "change"}}>Go to flow</LinkTo> (linkTo with a @models array)
+</div>
 
 <ul>
   <li>paramNames: {{this.paramsNamesAsString}}</li>
   <li>params: {{this.paramsAsString}}</li>
 </ul>
-{{outlet}}
